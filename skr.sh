@@ -14,6 +14,7 @@ until [ $COUNT -gt 2 ]; do
         
         echo "ifconfig eth0 $1 netmask 255.255.255.0 broadcast $1 up" >> pc$COUNT.startup  
 		echo "ifconfig eth1 $1 netmask 255.255.255.0 broadcast $1 up" >> pc$COUNT.startup  
+		echo "route add default gw $1" >> pc$COUNT.startup  
         let COUNT=COUNT+1
 done
 
