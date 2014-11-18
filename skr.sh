@@ -66,7 +66,10 @@ until [ $COUNT -gt 5 ]; do
 done
 
 
-geany lab.conf & geany *.startup &
+geany lab.conf &
+echo ok
+geany *.startup &
+firefox http://jakiemamip.pl/podzial-na-podsieci &
 else 
 echo poprawne wywolanie ./skr.sh [adres sieci] [maska sieci]
 fi
